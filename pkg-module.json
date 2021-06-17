@@ -1,5 +1,5 @@
 {
-  "name": "test-esModuleInterop",
+  "name": "test-ts-module-settings",
   "version": "1.0.0",
   "description": "",
   "type": "module",

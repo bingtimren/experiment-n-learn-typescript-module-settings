@@ -1,6 +1,6 @@
-# Experiment Typescript Option "esModuleInterop"
+# Experiment Typescript Module Related Settings
 
-This repo is for experimenting Typescript option "esModuleInterop" in all conditions, to find out what works, what doesn't work, and when to use what settings.
+This repo is for experimenting Typescript module related setting combinations, to find out what works, what doesn't work, and when to use what settings.
 
 ## Usage
 
