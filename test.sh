@@ -1,7 +1,9 @@
 #!/bin/bash
 clear;
 rm -fr logs;
+rm -fr dist;
 mkdir logs;
+mkdir dist;
 
 FORMAT="%-17s %-10s %-16s %-9s %-11s\n"
 
@@ -17,23 +19,23 @@ echo "-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*
 for testcase in "default-import" "namespace-import" "import-equal" "old-require"; do
 for module in "commonjs" "es2020"; do
 for interOp in "True" "False"; do
-    rm -f src/*.js;
+    OUTDIR="dist/$pkg/$module-$interOp"
+    COND="$pkg-$module-$interOp-$testcase"
+    OUTFILE="$OUTDIR/test-$testcase.js"
     if [ $interOp = "True" ];then INTEROP_OPTION="--esModuleInterop";else INTEROP_OPTION="";fi
-    CMD="tsc --module $module $INTEROP_OPTION src/test-$testcase.ts"
-    echo COMPILE COMMAND: $CMD > logs/$module-$testcase-compile.log;
-    echo > logs/$module-$testcase-compile.log;
-    if $CMD &>logs/$module-$testcase-compile.log;then compile=SUCCESS;else compile=FAIL;fi
+    CMD="tsc --rootDir ./src --outDir $OUTDIR --target es2020 --noEmitOnError --module $module $INTEROP_OPTION --moduleResolution node src/test-$testcase.ts"
+    echo COMPILE COMMAND: $CMD > logs/$COND-compile.log;
+    echo >> logs/$COND.log;
+    if $CMD &>>logs/$COND-compile.log;then compile=SUCCESS;else compile=FAIL;fi
     if [ $compile = "SUCCESS" ];then
-        EXEC="node src/test-$testcase.js";
-        if $EXEC &>logs/$module-$testcase-exec.log;then execution=SUCCESS;else execution=FAIL;fi
+        EXEC="node $OUTFILE";
+        if $EXEC &>logs/$COND-exec.log;then execution=SUCCESS;else execution=FAIL;fi
     else
-    EXEC=SKIPPED
-    execution="- -"
+        EXEC=SKIPPED
+        execution="- -"
     fi
     printf "$FORMAT" "$testcase" "$module" "$interOp" "$compile" "$execution"
 done
 done
 done
 done
-
-rm -f src/*.js
