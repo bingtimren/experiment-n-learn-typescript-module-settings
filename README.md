@@ -14,18 +14,19 @@ npm run test
 ## Results
 
 <pre><code>
+
 package.json: "type": "commonjs",
 
 CASE              MODULE     esModuleInterop  COMPILE   EXEC       
 -*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-
 default-import    commonjs   True             SUCCESS   SUCCESS    
 default-import    commonjs   False            FAIL      - -        
-default-import    es2020     True             FAIL      - -        
+default-import    es2020     True             SUCCESS   FAIL       
 default-import    es2020     False            FAIL      - -        
 namespace-import  commonjs   True             FAIL      - -        
 namespace-import  commonjs   False            SUCCESS   SUCCESS    
 namespace-import  es2020     True             FAIL      - -        
-namespace-import  es2020     False            FAIL      - -        
+namespace-import  es2020     False            SUCCESS   FAIL       
 import-equal      commonjs   True             SUCCESS   SUCCESS    
 import-equal      commonjs   False            SUCCESS   SUCCESS    
 import-equal      es2020     True             FAIL      - -        
@@ -41,12 +42,12 @@ CASE              MODULE     esModuleInterop  COMPILE   EXEC
 -*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-
 default-import    commonjs   True             SUCCESS   FAIL       
 default-import    commonjs   False            FAIL      - -        
-default-import    es2020     True             FAIL      - -        
+default-import    es2020     True             SUCCESS   SUCCESS    
 default-import    es2020     False            FAIL      - -        
 namespace-import  commonjs   True             FAIL      - -        
 namespace-import  commonjs   False            SUCCESS   FAIL       
 namespace-import  es2020     True             FAIL      - -        
-namespace-import  es2020     False            FAIL      - -        
+namespace-import  es2020     False            SUCCESS   FAIL       
 import-equal      commonjs   True             SUCCESS   FAIL       
 import-equal      commonjs   False            SUCCESS   FAIL       
 import-equal      es2020     True             FAIL      - -        
@@ -55,5 +56,6 @@ old-require       commonjs   True             SUCCESS   FAIL
 old-require       commonjs   False            SUCCESS   FAIL       
 old-require       es2020     True             SUCCESS   FAIL       
 old-require       es2020     False            SUCCESS   FAIL       
+
 
 </code></pre>
