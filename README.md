@@ -15,47 +15,105 @@ npm run test
 
 <pre><code>
 
-package.json: "type": "commonjs",
+package.json: "type": "commonjs", IMPORT: moment
 
-CASE              MODULE     esModuleInterop  COMPILE   EXEC       
+MODULE     CASE              esModuleInterop  COMPILE   EXEC       
 -*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-
-default-import    commonjs   True             SUCCESS   SUCCESS    
-default-import    commonjs   False            FAIL      - -        
-default-import    es2020     True             SUCCESS   FAIL       
-default-import    es2020     False            FAIL      - -        
-namespace-import  commonjs   True             FAIL      - -        
-namespace-import  commonjs   False            SUCCESS   SUCCESS    
-namespace-import  es2020     True             FAIL      - -        
-namespace-import  es2020     False            SUCCESS   FAIL       
-import-equal      commonjs   True             SUCCESS   SUCCESS    
-import-equal      commonjs   False            SUCCESS   SUCCESS    
-import-equal      es2020     True             FAIL      - -        
-import-equal      es2020     False            FAIL      - -        
-old-require       commonjs   True             SUCCESS   SUCCESS    
-old-require       commonjs   False            SUCCESS   SUCCESS    
-old-require       es2020     True             SUCCESS   SUCCESS    
-old-require       es2020     False            SUCCESS   SUCCESS    
+commonjs   default-import    True             SUCCESS   SUCCESS    
+commonjs   default-import    False            FAIL      - -        
+commonjs   namespace-import  True             FAIL      - -        
+commonjs   namespace-import  False            SUCCESS   SUCCESS    
+commonjs   import-equal      True             SUCCESS   SUCCESS    
+commonjs   import-equal      False            SUCCESS   SUCCESS    
+commonjs   old-require       True             SUCCESS   SUCCESS    
+commonjs   old-require       False            SUCCESS   SUCCESS    
+commonjs   dynamic-import    True             SUCCESS   SUCCESS    
+commonjs   dynamic-import    False            FAIL      - -        
+es2020     default-import    True             SUCCESS   FAIL       
+es2020     default-import    False            FAIL      - -        
+es2020     namespace-import  True             FAIL      - -        
+es2020     namespace-import  False            SUCCESS   FAIL       
+es2020     import-equal      True             FAIL      - -        
+es2020     import-equal      False            FAIL      - -        
+es2020     old-require       True             SUCCESS   SUCCESS    
+es2020     old-require       False            SUCCESS   SUCCESS    
+es2020     dynamic-import    True             SUCCESS   SUCCESS    
+es2020     dynamic-import    False            FAIL      - -        
 
-package.json: "type": "module",
+package.json: "type": "module", IMPORT: moment
 
-CASE              MODULE     esModuleInterop  COMPILE   EXEC       
+MODULE     CASE              esModuleInterop  COMPILE   EXEC       
 -*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-
-default-import    commonjs   True             SUCCESS   FAIL       
-default-import    commonjs   False            FAIL      - -        
-default-import    es2020     True             SUCCESS   SUCCESS    
-default-import    es2020     False            FAIL      - -        
-namespace-import  commonjs   True             FAIL      - -        
-namespace-import  commonjs   False            SUCCESS   FAIL       
-namespace-import  es2020     True             FAIL      - -        
-namespace-import  es2020     False            SUCCESS   FAIL       
-import-equal      commonjs   True             SUCCESS   FAIL       
-import-equal      commonjs   False            SUCCESS   FAIL       
-import-equal      es2020     True             FAIL      - -        
-import-equal      es2020     False            FAIL      - -        
-old-require       commonjs   True             SUCCESS   FAIL       
-old-require       commonjs   False            SUCCESS   FAIL       
-old-require       es2020     True             SUCCESS   FAIL       
-old-require       es2020     False            SUCCESS   FAIL       
+commonjs   default-import    True             SUCCESS   FAIL       
+commonjs   default-import    False            FAIL      - -        
+commonjs   namespace-import  True             FAIL      - -        
+commonjs   namespace-import  False            SUCCESS   FAIL       
+commonjs   import-equal      True             SUCCESS   FAIL       
+commonjs   import-equal      False            SUCCESS   FAIL       
+commonjs   old-require       True             SUCCESS   FAIL       
+commonjs   old-require       False            SUCCESS   FAIL       
+commonjs   dynamic-import    True             SUCCESS   FAIL       
+commonjs   dynamic-import    False            FAIL      - -        
+es2020     default-import    True             SUCCESS   SUCCESS    
+es2020     default-import    False            FAIL      - -        
+es2020     namespace-import  True             FAIL      - -        
+es2020     namespace-import  False            SUCCESS   FAIL       
+es2020     import-equal      True             FAIL      - -        
+es2020     import-equal      False            FAIL      - -        
+es2020     old-require       True             SUCCESS   FAIL       
+es2020     old-require       False            SUCCESS   FAIL       
+es2020     dynamic-import    True             SUCCESS   SUCCESS    
+es2020     dynamic-import    False            FAIL      - -        
+
+package.json: "type": "commonjs", IMPORT: p-map
+
+MODULE     CASE              esModuleInterop  COMPILE   EXEC       
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-
+commonjs   default-import    True             SUCCESS   FAIL       
+commonjs   default-import    False            SUCCESS   FAIL       
+commonjs   namespace-import  True             SUCCESS   FAIL       
+commonjs   namespace-import  False            SUCCESS   FAIL       
+commonjs   import-equal      True             SUCCESS   FAIL       
+commonjs   import-equal      False            SUCCESS   FAIL       
+commonjs   old-require       True             SUCCESS   FAIL       
+commonjs   old-require       False            SUCCESS   FAIL       
+commonjs   dynamic-import    True             SUCCESS   FAIL       
+commonjs   dynamic-import    False            SUCCESS   FAIL       
+es2020     default-import    True             SUCCESS   FAIL       
+es2020     default-import    False            SUCCESS   FAIL       
+es2020     namespace-import  True             SUCCESS   FAIL       
+es2020     namespace-import  False            SUCCESS   FAIL       
+es2020     import-equal      True             FAIL      - -        
+es2020     import-equal      False            FAIL      - -        
+es2020     old-require       True             SUCCESS   FAIL       
+es2020     old-require       False            SUCCESS   FAIL       
+es2020     dynamic-import    True             SUCCESS   SUCCESS    
+es2020     dynamic-import    False            SUCCESS   SUCCESS    
+
+package.json: "type": "module", IMPORT: p-map
+
+MODULE     CASE              esModuleInterop  COMPILE   EXEC       
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-
+commonjs   default-import    True             SUCCESS   FAIL       
+commonjs   default-import    False            SUCCESS   FAIL       
+commonjs   namespace-import  True             SUCCESS   FAIL       
+commonjs   namespace-import  False            SUCCESS   FAIL       
+commonjs   import-equal      True             SUCCESS   FAIL       
+commonjs   import-equal      False            SUCCESS   FAIL       
+commonjs   old-require       True             SUCCESS   FAIL       
+commonjs   old-require       False            SUCCESS   FAIL       
+commonjs   dynamic-import    True             SUCCESS   FAIL       
+commonjs   dynamic-import    False            SUCCESS   FAIL       
+es2020     default-import    True             SUCCESS   SUCCESS    
+es2020     default-import    False            SUCCESS   SUCCESS    
+es2020     namespace-import  True             SUCCESS   SUCCESS    
+es2020     namespace-import  False            SUCCESS   SUCCESS    
+es2020     import-equal      True             FAIL      - -        
+es2020     import-equal      False            FAIL      - -        
+es2020     old-require       True             SUCCESS   FAIL       
+es2020     old-require       False            SUCCESS   FAIL       
+es2020     dynamic-import    True             SUCCESS   SUCCESS    
+es2020     dynamic-import    False            SUCCESS   SUCCESS    
 
 
 </code></pre>
