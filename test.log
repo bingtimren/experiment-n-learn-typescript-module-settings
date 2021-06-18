@@ -1,0 +1,106 @@
+Node Version v16.3.0
+TSC Version 3.8.3
+
+PKG-TYPE   TARGET MODULE     CASE              esModuleInterop  COMPILE   EXEC       
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-
+commonjs   moment commonjs   default-import    True             SUCCESS   SUCCESS    
+commonjs   moment commonjs   default-import    False            FAIL      - -        
+commonjs   moment commonjs   namespace-import  True             FAIL      - -        
+commonjs   moment commonjs   namespace-import  False            SUCCESS   SUCCESS    
+commonjs   moment commonjs   import-equal      True             SUCCESS   SUCCESS    
+commonjs   moment commonjs   import-equal      False            SUCCESS   SUCCESS    
+commonjs   moment commonjs   old-require       True             SUCCESS   SUCCESS    
+commonjs   moment commonjs   old-require       False            SUCCESS   SUCCESS    
+commonjs   moment commonjs   dynamic-import    True             SUCCESS   SUCCESS    
+commonjs   moment commonjs   dynamic-import    False            FAIL      - -        
+commonjs   moment es2020     default-import    True             SUCCESS   FAIL       
+commonjs   moment es2020     default-import    False            FAIL      - -        
+commonjs   moment es2020     namespace-import  True             FAIL      - -        
+commonjs   moment es2020     namespace-import  False            SUCCESS   FAIL       
+commonjs   moment es2020     import-equal      True             FAIL      - -        
+commonjs   moment es2020     import-equal      False            FAIL      - -        
+commonjs   moment es2020     old-require       True             SUCCESS   SUCCESS    
+commonjs   moment es2020     old-require       False            SUCCESS   SUCCESS    
+commonjs   moment es2020     dynamic-import    True             SUCCESS   SUCCESS    
+commonjs   moment es2020     dynamic-import    False            FAIL      - -        
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-
+module     moment commonjs   default-import    True             SUCCESS   FAIL       
+module     moment commonjs   default-import    False            FAIL      - -        
+module     moment commonjs   namespace-import  True             FAIL      - -        
+module     moment commonjs   namespace-import  False            SUCCESS   FAIL       
+module     moment commonjs   import-equal      True             SUCCESS   FAIL       
+module     moment commonjs   import-equal      False            SUCCESS   FAIL       
+module     moment commonjs   old-require       True             SUCCESS   FAIL       
+module     moment commonjs   old-require       False            SUCCESS   FAIL       
+module     moment commonjs   dynamic-import    True             SUCCESS   FAIL       
+module     moment commonjs   dynamic-import    False            FAIL      - -        
+module     moment es2020     default-import    True             SUCCESS   SUCCESS    
+module     moment es2020     default-import    False            FAIL      - -        
+module     moment es2020     namespace-import  True             FAIL      - -        
+module     moment es2020     namespace-import  False            SUCCESS   FAIL       
+module     moment es2020     import-equal      True             FAIL      - -        
+module     moment es2020     import-equal      False            FAIL      - -        
+module     moment es2020     old-require       True             SUCCESS   FAIL       
+module     moment es2020     old-require       False            SUCCESS   FAIL       
+module     moment es2020     dynamic-import    True             SUCCESS   SUCCESS    
+module     moment es2020     dynamic-import    False            FAIL      - -        
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-
+commonjs   p-map  commonjs   default-import    True             SUCCESS   FAIL       
+commonjs   p-map  commonjs   default-import    False            SUCCESS   FAIL       
+commonjs   p-map  commonjs   namespace-import  True             SUCCESS   FAIL       
+commonjs   p-map  commonjs   namespace-import  False            SUCCESS   FAIL       
+commonjs   p-map  commonjs   import-equal      True             SUCCESS   FAIL       
+commonjs   p-map  commonjs   import-equal      False            SUCCESS   FAIL       
+commonjs   p-map  commonjs   old-require       True             SUCCESS   FAIL       
+commonjs   p-map  commonjs   old-require       False            SUCCESS   FAIL       
+commonjs   p-map  commonjs   dynamic-import    True             SUCCESS   FAIL       
+commonjs   p-map  commonjs   dynamic-import    False            SUCCESS   FAIL       
+commonjs   p-map  es2020     default-import    True             SUCCESS   FAIL       
+commonjs   p-map  es2020     default-import    False            SUCCESS   FAIL       
+commonjs   p-map  es2020     namespace-import  True             SUCCESS   FAIL       
+commonjs   p-map  es2020     namespace-import  False            SUCCESS   FAIL       
+commonjs   p-map  es2020     import-equal      True             FAIL      - -        
+commonjs   p-map  es2020     import-equal      False            FAIL      - -        
+commonjs   p-map  es2020     old-require       True             SUCCESS   FAIL       
+commonjs   p-map  es2020     old-require       False            SUCCESS   FAIL       
+commonjs   p-map  es2020     dynamic-import    True             SUCCESS   SUCCESS    
+commonjs   p-map  es2020     dynamic-import    False            SUCCESS   SUCCESS    
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-
+module     p-map  commonjs   default-import    True             SUCCESS   FAIL       
+module     p-map  commonjs   default-import    False            SUCCESS   FAIL       
+module     p-map  commonjs   namespace-import  True             SUCCESS   FAIL       
+module     p-map  commonjs   namespace-import  False            SUCCESS   FAIL       
+module     p-map  commonjs   import-equal      True             SUCCESS   FAIL       
+module     p-map  commonjs   import-equal      False            SUCCESS   FAIL       
+module     p-map  commonjs   old-require       True             SUCCESS   FAIL       
+module     p-map  commonjs   old-require       False            SUCCESS   FAIL       
+module     p-map  commonjs   dynamic-import    True             SUCCESS   FAIL       
+module     p-map  commonjs   dynamic-import    False            SUCCESS   FAIL       
+module     p-map  es2020     default-import    True             SUCCESS   SUCCESS    
+module     p-map  es2020     default-import    False            SUCCESS   SUCCESS    
+module     p-map  es2020     namespace-import  True             SUCCESS   SUCCESS    
+module     p-map  es2020     namespace-import  False            SUCCESS   SUCCESS    
+module     p-map  es2020     import-equal      True             FAIL      - -        
+module     p-map  es2020     import-equal      False            FAIL      - -        
+module     p-map  es2020     old-require       True             SUCCESS   FAIL       
+module     p-map  es2020     old-require       False            SUCCESS   FAIL       
+module     p-map  es2020     dynamic-import    True             SUCCESS   SUCCESS    
+module     p-map  es2020     dynamic-import    False            SUCCESS   SUCCESS    
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-
+commonjs   mixing commonjs   build-commonjs    True             SUCCESS   FAIL       
+commonjs   mixing commonjs   build-commonjs    False            FAIL      - -        
+commonjs   mixing commonjs   build-module      True             SUCCESS   FAIL       
+commonjs   mixing commonjs   build-module      False            FAIL      - -        
+commonjs   mixing es2020     build-commonjs    True             SUCCESS   SUCCESS    
+commonjs   mixing es2020     build-commonjs    False            FAIL      - -        
+commonjs   mixing es2020     build-module      True             SUCCESS   FAIL       
+commonjs   mixing es2020     build-module      False            FAIL      - -        
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-
+module     mixing commonjs   build-commonjs    True             SUCCESS   FAIL       
+module     mixing commonjs   build-commonjs    False            FAIL      - -        
+module     mixing commonjs   build-module      True             SUCCESS   FAIL       
+module     mixing commonjs   build-module      False            FAIL      - -        
+module     mixing es2020     build-commonjs    True             SUCCESS   FAIL       
+module     mixing es2020     build-commonjs    False            FAIL      - -        
+module     mixing es2020     build-module      True             SUCCESS   SUCCESS    
+module     mixing es2020     build-module      False            FAIL      - -        
