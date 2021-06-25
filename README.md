@@ -12,3 +12,5 @@ npm run test
 ## Results
 
 See [test.log](./test.log)
+
+See analysis of the result [here](https://javascript.plainenglish.io/how-to-correctly-use-typescript-module-import-syntax-and-settings-in-various-circumstances-e98bfa87f70f).
